@@ -1,16 +1,33 @@
-#version 330
+ #version 130 
 
-in vec2 texCoord0;
-in vec3 normal0;
-in vec3 color0;
-in vec3 position0;
+uniform vec4 eye;
+uniform vec4 ambient;
+uniform vec4[20] objects;
+uniform vec4[20] objColors;
+uniform vec4[10] lightsDirection;
+uniform vec4[10] lightsIntensity;
+uniform vec4[10] lightPosition;
+uniform ivec4 sizes; //{number of objects , number of lights , width, hight}  
 
-uniform vec4 lightColor;
-uniform sampler2D sampler;
-uniform vec4 lightDirection;
+in vec3 position1;
 
+float intersection(vec3 sourcePoint,vec3 v)
+{
+    
+    return 0;
+    
+}
+
+vec3 colorCalc( vec3 intersectionPoint)
+{
+    vec3 color = vec3(1,0,1);
+    
+    return color;
+}
 
 void main()
-{
-	gl_FragColor = texture2D(sampler, texCoord0); //you must have gl_FragColor
+{  
+   
+            gl_FragColor = vec4(colorCalc(eye.xyz),1);      
 }
+ 

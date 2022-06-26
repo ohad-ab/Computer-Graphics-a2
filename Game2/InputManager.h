@@ -39,7 +39,11 @@
 	{
 		Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
 		Game2* scn = (Game2*)rndr->GetScene();
+<<<<<<< Updated upstream
 		
+=======
+		//scn->UpdatePosition((float)xpos, (float)ypos);
+>>>>>>> Stashed changes
 		rndr->UpdatePosition((float)xpos,(float)ypos);
 
 			if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS)
@@ -90,7 +94,14 @@
 				rndr->MoveCamera(0, scn->zTranslate, -0.4f);
 				break;
 			case GLFW_KEY_LEFT:
+<<<<<<< Updated upstream
 				break;
+=======
+				rndr->MoveCamera(0, scn->xTranslate, -0.4f);
+				break;
+			case GLFW_KEY_RIGHT:
+
+>>>>>>> Stashed changes
 			default:
 				break;
 			}

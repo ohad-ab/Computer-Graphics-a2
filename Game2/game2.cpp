@@ -92,7 +92,11 @@ void Game2::UpdatePosition(float xpos,  float ypos)
 	int viewport[4];
 	glGetIntegerv(GL_VIEWPORT, viewport);
 	x = xpos / viewport[2];
+<<<<<<< Updated upstream
 	y =  1 - ypos / viewport[3]; 
+=======
+	y = 1 - ypos / viewport[3]; 
+>>>>>>> Stashed changes
 }
 
 void Game2::WhenRotate()

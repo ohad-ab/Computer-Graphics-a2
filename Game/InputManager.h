@@ -23,7 +23,7 @@
 		Renderer* rndr = (Renderer*)glfwGetWindowUserPointer(window);
 		Game* scn = (Game*)rndr->GetScene();
 
-		scn->MyTranslate(glm::vec3(0,0,xoffset),0);
+		scn->MyTranslate(glm::vec3(0,0,xoffset),0.4f);
 		
 	}
 	
@@ -80,7 +80,8 @@
 				//cout<< "down: "<<endl;
 				rndr->MoveCamera(0, scn->zTranslate, -0.4f);
 				break;
-
+			case GLFW_KEY_LEFT:
+				rndr->MoveCamera(0, scn->xTranslate, -0.4f);
 			default:
 				break;
 			}
